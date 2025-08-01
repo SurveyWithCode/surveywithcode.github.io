@@ -25,7 +25,7 @@ import { rehypeIcon } from "./plugins/rehype-icon.mjs"
 // import { recmaRewriteFunctionBody } from './plugins/recma-rewrite-function-body.mjs'
 
 const withMDX = nextMDX({
-  extension: /\.mdx?$/,
+  extension: /\.(md|mdx)$/,
   options: {
     remarkPlugins: [
       // remarkMermaid,

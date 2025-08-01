@@ -1,9 +1,9 @@
 @import "tailwindcss";
 @layer theme, base, components, utilities;
-@import "../styles/subheading-anchor.css";
-@import "../styles/scrollbar.css";
-@import "../styles/steps.css";
-@import "../styles/code-block.css";
+/* @import "../styles/subheading-anchor.css"; */
+/* @import "../styles/scrollbar.css"; */
+/* @import "../styles/steps.css"; */
+/* @import "../styles/code-block.css"; */
 @import "../styles/utilities.css";
 @import "./fonts.css";
 
