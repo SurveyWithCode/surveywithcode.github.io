@@ -13,7 +13,13 @@ import ErrorBoundary from "@/components/ErrorBoundary"
 
 export const metadata = {
   title: "SurveyWithCode - From Research to Reproducibility",
-  description: "SurveyWithCode is a curated platform that connects research survey papers with their corresponding implementations, codebases, and benchmarks. Designed for the AI and ML research community, it enables fast discovery of state-of-the-art summaries alongside practical code resources, accelerating understanding, comparison, and experimentation.",
+  description:
+    "SurveyWithCode is a curated platform that connects research survey papers with their corresponding implementations, codebases, and benchmarks. Designed for the AI and ML research community, it enables fast discovery of state-of-the-art summaries alongside practical code resources, accelerating understanding, comparison, and experimentation.",
+  icons: {
+    icon: "/favicon.ico", // for standard favicon
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default async function RootLayout({ children }) {
@@ -29,8 +35,16 @@ export default async function RootLayout({ children }) {
           name="description"
           content="SurveyWithCode is a curated platform that connects research survey papers with their corresponding implementations, codebases, and benchmarks. Designed for the AI and ML research community, it enables fast discovery of state-of-the-art summaries alongside practical code resources, accelerating understanding, comparison, and experimentation."
         />
+
         <meta name="author" content="Survey With Code" />
+
+        <meta name="theme-color" content="#ffffff"></meta>
         <title>SurveyWithCode - From Research to Reproducibility</title>
+
+        <link rel="icon" type="image/png" href="/favicon.png"></link>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"></link>
+        <link rel="manifest" href="/site.webmanifest"></link>
       </head>
       <body className="nextra-banner-hidden">
         <ErrorBoundary>
