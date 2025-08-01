@@ -1,0 +1,165 @@
+# SurveyWithCode Leaderboard
+
+The **SurveyWithCode Leaderboard** is a living benchmark platform designed to evaluate and showcase gesture generation models. It enables researchers to test their models against a standardized dataset and human-centric evaluation pipeline, promoting reproducibility and transparent comparison.
+
+The initial phase of the leaderboard will include results from previously published models adapted to the BEAT-2 dataset. Later, the platform will open for public submissions from the research community.
+
+---
+
+## Our Goals
+
+- Establish a **continuously updated benchmark** of state-of-the-art gesture generation models, based on **human evaluation** using widely adopted datasets.
+- Improve **reproducibility standards** by releasing evaluation outputs, human ratings, and open-source tools for motion rendering and user studies.
+- Use collected human ratings to develop **better objective evaluation metrics** aligned with perceptual quality.
+- **Unify research communities** across computer vision, machine learning, NLP, HCI, robotics, and animation.
+- Evolve dynamically with new datasets, metrics, and evaluation methodologies.
+
+---
+
+## Outcomes
+
+Once operational, **SurveyWithCode Leaderboard** will allow you to:
+
+- **Submit** your model outputs for **free human evaluation** (2–4 weeks turnaround).
+- **Compare** against top systems with access to curated video renders and human ratings.
+- **Visualize** your synthetic motion and conduct **your own user studies** using our open-source tools.
+- Access reproducible results and insights to **accelerate research iterations**.
+
+---
+
+## Setup & Timeline
+
+We are currently inviting authors of gesture generation models to participate in an initial evaluation round. After this, the leaderboard will open to public submissions in **March 2025**, with continuous updates and support for new benchmarks and methods.
+
+---
+
+## Dataset: BEAT-2 (SMPL-X Format)
+
+We benchmark models on the English test split of the [BEAT-2 dataset](https://pantomatrix.github.io/EMAGE/), using SMPL-X body models and excluding facial expressions in this initial release.
+
+### Why BEAT-2?
+
+1. Largest public gesture motion capture dataset (60+ hours).
+2. High diversity of speakers, expressions, and annotations.
+3. Compatible with SMPL-X and standard pose estimation pipelines.
+4. Extensible for future evaluation tasks (e.g., facial expression).
+
+---
+
+## Submission Process
+
+### Participation Rules
+
+- Targeting **published or peer-reviewed systems**. Non-peer-reviewed entries may be filtered.
+- All motion outputs and rendered clips will be published alongside evaluation results.
+- You may train on public datasets, excluding BEAT-2 test set or any test overlap from BEAT.
+- A **technical report** describing your system is required (brief for already-published models).
+
+### How to Participate
+
+1. **Pre-screening**  
+   Email us with:
+   - Model name + link to the paper/preprint.
+   - Planned changes (if any).
+   - Team members and responsible contact.  
+   → We will respond within a few days.
+
+2. **Train your model**  
+   Use the official training split of BEAT-2 and any other public mocap datasets (excluding BEAT test sets).
+
+3. **Generate outputs**  
+   For each BEAT-2 test sample, generate SMPL-X motion. If stochastic, provide 5 samples per input.
+
+4. **Submit & report**  
+   Upload motion outputs and a brief technical report describing training, architecture, and configuration.
+
+---
+
+## Post-Submission Process
+
+1. **Validation**  
+   We inspect outputs for quality and compatibility.
+
+2. **Segmentation**  
+   Motion is split into 10–15 second clips for consistent human evaluation.
+
+3. **Rendering**  
+   Our team renders all clips in a standardized 3D scene using SMPL-X textured characters.
+
+4. **Evaluation**  
+   Human studies are run at scale with best-practice protocols.
+
+5. **Publishing**  
+   Technical report, evaluation metrics, human scores, and videos are published to the leaderboard.
+
+6. **Community Reports**  
+   Periodically, we co-author state-of-the-art survey papers summarizing leaderboard findings.
+
+---
+
+## Evaluation Methodology
+
+We use **pairwise human preference** studies, with an Elo-style ranking system (Bradley-Terry model), similar to [Chatbot Arena](https://lmarena.ai/), to measure:
+
+### 1. Motion Quality
+
+Silent videos are compared in pairs to assess naturalness, smoothness, and realism.
+
+### 2. Speech Specificity
+
+Each system is evaluated for whether its gestures are appropriate for the speech input, using a *mismatch detection* strategy inspired.
+
+### 3. Future Tasks
+
+Later tasks may include:
+- Facial expressiveness
+- Emotional alignment
+- Semantic grounding of gestures
+
+---
+
+## Tooling
+
+### Standardized Visualisation
+
+We use a neutral 3D environment and character model (SMPL-X) for all renders, ensuring fair visual comparisons. Options to hide face are available for body-only tasks.
+
+### User Study Automation
+
+We are refactoring the [HEMVIP](https://github.com/surveywithcode/hemvip) framework to provide a stable, easy-to-use platform for reproducible user studies.
+
+### Objective Metrics
+
+The leaderboard will include:
+- FGD (Fréchet Gesture Distance)
+- Beat alignment
+- Diversity metrics  
+...and more, using both classic and newly derived evaluation protocols.
+
+---
+
+## Frequently Asked Questions
+
+<details>
+<summary>Why do we need a leaderboard?</summary>
+
+- Gesture generation research is currently fragmented across different datasets and evaluation protocols.
+- Objective metrics are inconsistently applied, and their validity is not sufficiently established in the literature.
+- At the same time, subjective evaluation methods often have low reproducibility, and their results are impossible to directly compare to each other.
+- This leads to a situation where it is impossible to know what is the state of the art, or to know which method works better for which purpose when comparing two publications.
+- The leaderboard is designed to directly counter these issues.
+
+</details>
+
+<details>
+<summary>Is it free?</summary>
+
+We currently have academic funding for running the leaderboard for a period of time. Having your system evaluated by the leaderboard will be free of charge. However, if there are a lot of systems submitted, we might not be able to evaluate all of them.
+
+</details>
+
+---
+
+## Contact
+
+📩 [leaderboard@surveywithcode.org](mailto:leaderboard@surveywithcode.org)
