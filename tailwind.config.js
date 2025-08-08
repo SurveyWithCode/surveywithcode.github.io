@@ -1,5 +1,13 @@
 export default {
   theme: {
+    extend: {
+      fontFamily: {
+        'sans': ['TTT', 'Segoe UI', 'ui-sans-serif', 'system-ui'],
+        'katex': ['KaTeX_Main'],
+        'katex-sans': ['KaTeX_SansSerif'],
+        'katex-mono': ['KaTeX_Typewriter', 'monospace'],
+      },
+    },
     fontSize: {
       xs: ".75rem",
       sm: ".875rem",
