@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import * as d3 from "d3"
 
-export default function Hierarchy({ data }) {
+export default function IndentedTree({ data }) {
   const svgRef = useRef(null);
 
   useEffect(() => {
