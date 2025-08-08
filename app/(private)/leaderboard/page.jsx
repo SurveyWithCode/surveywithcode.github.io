@@ -71,24 +71,24 @@ export default function Page() {
 
   return (
     <div>
-      <h1 className="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+      <h1 className="mt-2 text-4xl font-bold tracking-tight dark:text-slate-100">
         Leaderboard
       </h1>
-      <h3 className="font-semibold tracking-tight text-slate-900 dark:text-slate-100 mt-8 text-2xl">
+      <h3 className="font-semibold tracking-tight dark:text-slate-100 mt-8 text-2xl">
         Sample 1
       </h3>
       <p className="mt-4 first:mt-0">
         Sample data of Evaluation Result.
       </p>
       {/* <HighChart data={evaluationData} /> */}
-      <h3 className="font-semibold tracking-tight text-slate-900 dark:text-slate-100 mt-8 text-2xl">
+      <h3 className="font-semibold tracking-tight dark:text-slate-100 mt-8 text-2xl">
         Sample 2
       </h3>
       <p className="mt-4 first:mt-0">
         Sample data of Evaluation Result.
       </p>
       {/* <PairwiseComparisonChart data={data} /> */}
-      <h3 className="font-semibold tracking-tight text-slate-900 dark:text-slate-100 mt-8 text-2xl">
+      <h3 className="font-semibold tracking-tight dark:text-slate-100 mt-8 text-2xl">
         Sample 3
       </h3>
       <p className="mt-4 first:mt-0">

@@ -78,7 +78,7 @@ export default function Page() {
           </div>
           <div id="nextra-skip-nav"></div>
           <main data-pagefind-body="true">
-            <h1 className="tracking-tight text-slate-900 dark:text-slate-100 font-bold mt-2 text-4xl">Blog</h1>
+            <h1 className="tracking-tight dark:text-slate-100 font-bold mt-2 text-4xl">Blog</h1>
             <div className="mt-12">
               <h3 className="text-2xl font-semibold">Nextra 4</h3>
               <p className="my-6 leading-7 opacity-80">

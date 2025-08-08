@@ -46,14 +46,14 @@
 
   html {
     font-size: 13.333px;
-    font-feature-settings: "liga", "kern";
+    line-height: 1.2;
+
+    /* font-feature-settings: "liga", "kern";
     font-variant-ligatures: common-ligatures discretionary-ligatures;
     font-kerning: normal;
     font-variant-numeric: oldstyle-nums;
-    line-height: 1.2;
     letter-spacing: 0;
-    word-spacing: 0;
-    /* font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss06" 1; */
+    word-spacing: 0; */
     font-family:
       "SurveyWithCode",
       "Segoe UI",
@@ -75,8 +75,6 @@
       Noto Color Emoji;
 
     scroll-padding-top: 4rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     /* font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1; */
 
     font-size: 1rem;
