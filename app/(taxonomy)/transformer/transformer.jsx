@@ -19,7 +19,7 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
       .attr("height", height)
       .style("font", "12px")
 
-    const g = svg.append("g").attr("transform", `translate(40, ${height / 2})`)
+    const g = svg.append("g").attr("transform", `translate(60, ${height / 2})`)
 
     let i = 0
     const duration = 750
@@ -30,6 +30,7 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
 
     // Initialize the tree with all nodes expanded
     // Remove the collapse initialization - all nodes will be expanded by default
+    console.log('Tree initialized with nodes:', root.descendants().length)
     
     function collapse(d) {
       if (d.children) {
@@ -44,11 +45,17 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
       const approx = Math.min(maxWidth, Math.max(60, text.length * 6))
       const lines = wrapText(text, Math.floor(approx / 6))
       const fontSize = level === 1 ? 11 : level === 2 ? 10 : 9
-      const lineHeight = fontSize * 1.2
+      const lineHeight = fontSize * 1.1 // TikZ-style tighter spacing
       const padding = 16
+      
+      // TikZ-style height calculation: account for actual text metrics
+      const textHeight = lines.length === 1 
+        ? fontSize + 4 // Single line with some breathing room
+        : fontSize + (lines.length - 1) * lineHeight + 4 // Multi-line with proper spacing
+      
       return { 
         w: approx + padding, 
-        h: lines.length * lineHeight + padding, 
+        h: textHeight + padding, 
         lines 
       }
     }
@@ -70,16 +77,32 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
     }
 
     function update(source) {
-      const treeLayout = d3.tree().nodeSize([30, 220])
+      const treeLayout = d3.tree().nodeSize([30, 180]) // Adjust spacing
       const treeData = treeLayout(root)
 
       const nodes = treeData.descendants()
       const links = treeData.links()
 
-      // Normalize for fixed-depth
+      // Normalize for fixed-depth and adjust positioning
       nodes.forEach((d) => {
         d._x = d.x - height / 2 // center vertically
-        d._y = d.y
+        // Custom positioning for each level
+        switch (d.depth) {
+          case 0:
+            d._y = 0 // Root at origin
+            break
+          case 1:
+            d._y = 140 // First level close to root
+            break
+          case 2:
+            d._y = 300 // Second level
+            break
+          case 3:
+            d._y = 480 // Third level
+            break
+          default:
+            d._y = 480 + (d.depth - 3) * 180 // Deeper levels
+        }
       })
 
       // Update the nodes
@@ -126,22 +149,25 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
       nodeEnter
         .append("text")
         .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle") // This ensures vertical centering like TikZ
         .attr("x", 0)
         .attr("y", 0)
         .each(function (d) {
           const { lines } = calcRect(d.data.name, d.depth)
           const textEl = d3.select(this)
           const fontSize = d.depth === 1 ? 11 : d.depth === 2 ? 10 : 9
-          const lineHeight = fontSize * 1.2
+          const lineHeight = fontSize * 1.1 // Slightly tighter line spacing like TikZ
 
-          const totalTextHeight = lines.length * lineHeight
-          const startY = -(totalTextHeight / 2) + (lineHeight / 2)
+          // Calculate vertical centering like TikZ: center the entire text block
+          const totalLines = lines.length
+          const blockHeight = (totalLines - 1) * lineHeight
+          const startOffset = -blockHeight / 2
 
           for (let i = 0; i < lines.length; i++) {
             textEl
               .append("tspan")
               .attr("x", 0)
-              .attr("y", startY + (i * lineHeight))
+              .attr("dy", i === 0 ? `${startOffset}px` : `${lineHeight}px`)
               .text(lines[i].replace(/\s+/g, " "))
           }
         })
@@ -151,7 +177,7 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
       // Add expand/collapse indicator
       nodeEnter
         .append("circle")
-        .attr("r", 8)
+        .attr("r", 3)
         .attr("cx", (d) => {
           const { w } = calcRect(d.data.name, d.depth)
           return w / 2 - 8
@@ -219,7 +245,8 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
         .attr("stroke-opacity", 0.6)
         .attr("d", (d) => {
           const o = { x: source.x0, y: source.y0 }
-          return diagonal(o, o)
+          // Use straight lines for ALL connections
+          return `M${o.y},${o.x}L${o.y},${o.x}` // Always straight line
         })
 
       // Transition links to their new position
@@ -229,7 +256,9 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
         .attr("d", (d) => {
           const src = { x: d.source._x, y: d.source._y }
           const tgt = { x: d.target._x, y: d.target._y }
-          return diagonal(src, tgt)
+          
+          // Use straight lines for ALL connections - no curves
+          return `M${src.y},${src.x}L${tgt.y},${tgt.x}` // Always straight line
         })
 
       // Transition exiting links to the parent's new position
@@ -239,7 +268,8 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
         .duration(duration)
         .attr("d", (d) => {
           const o = { x: source._x, y: source._y }
-          return diagonal(o, o)
+          // Use straight lines for ALL connections
+          return `M${o.y},${o.x}L${o.y},${o.x}` // Always straight line
         })
         .remove()
 
