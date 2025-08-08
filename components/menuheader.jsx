@@ -7,9 +7,9 @@ export default function MenuHeader() {
     <div className="flex gap-4 overflow-x-auto nextra-scrollbar py-1.5 max-md:hidden">
       <a
         className="focus-visible:nextra-focus text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 whitespace-nowrap text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200 ring-inset transition-colors aria-[current]:font-medium aria-[current]:subpixel-antialiased aria-[current]:text-current"
-        href="/docs"
+        href="/taxonomy"
       >
-        Documentation
+        Taxonomy
       </a>
       {/* <a
         className="focus-visible:nextra-focus text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 whitespace-nowrap text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200 ring-inset transition-colors aria-[current]:font-medium aria-[current]:subpixel-antialiased aria-[current]:text-current"
@@ -33,27 +33,27 @@ export default function MenuHeader() {
       </button> */}
       <a
         className="focus-visible:nextra-focus text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 whitespace-nowrap text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200 ring-inset transition-colors aria-[current]:font-medium aria-[current]:subpixel-antialiased aria-[current]:text-current"
-        href="/blog"
+        href="/leaderboard"
       >
-        Blog
+        Leaderboard
       </a>
       <a
         className="focus-visible:nextra-focus text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 whitespace-nowrap text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200 ring-inset transition-colors aria-[current]:font-medium aria-[current]:subpixel-antialiased aria-[current]:text-current"
-        href="/about"
+        href="/dataset"
       >
-        About
+        Dataset
       </a>
       <a
         className="focus-visible:nextra-focus text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 whitespace-nowrap text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200 ring-inset transition-colors aria-[current]:font-medium aria-[current]:subpixel-antialiased aria-[current]:text-current"
-        href="/showcase"
+        href="/stages"
       >
-        Showcase
+        Stages
       </a>
       <a
         className="focus-visible:nextra-focus text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 whitespace-nowrap text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200 ring-inset transition-colors aria-[current]:font-medium aria-[current]:subpixel-antialiased aria-[current]:text-current"
-        href="/sponsors"
+        href="/contribute"
       >
-        Sponsors
+        Contribute
       </a>
     </div>
   )

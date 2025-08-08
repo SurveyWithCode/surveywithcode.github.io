@@ -1,3 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --rows: 3; /* Default value for --rows, adjust as needed */
+}
+
 .nextra-cards {
   grid-template-columns: repeat(auto-fill, minmax(max(250px, calc((100% - 1rem * 2) / var(--rows))), 1fr));
 }
@@ -7,12 +13,12 @@
     @apply select-none;
   }
 
-  svg {
-    @apply w-6 h-auto transition text-black/30 dark:text-white/40;
+  & > span > svg {
+    @apply w-6 h-auto transition text-black/50 dark:text-white/50 shrink-0;
   }
 
-  &:hover svg {
-    @apply text-current dark:text-current;
+  &:hover > span > svg {
+    @apply !text-current;
   }
 
   p {

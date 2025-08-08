@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --nextra-bg: 0, 0, 0; /* Default to black for modal overlay, adjust as needed */
+}
+
+[data-rmiz-ghost] {
+  position: absolute;
+  pointer-events: none;
+}
+
+[data-rmiz-btn-zoom],
+[data-rmiz-btn-unzoom] {
+  @apply bg-black/70 text-white dark:bg-white/70 dark:text-black rounded-full size-10;
+  outline-offset: 2px;
+  padding: 9px;
+  touch-action: manipulation;
+  appearance: none;
+}
+
+[data-rmiz-btn-zoom] {
+  @apply absolute top-2.5 right-2.5;
+  cursor: zoom-in;
+}
+
+[data-rmiz-btn-zoom]:not(:focus):not(:active) {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[data-rmiz-btn-unzoom] {
+  @apply absolute top-5 right-5;
+  cursor: zoom-out;
+  z-index: 1;
+}
+
+[data-rmiz-content="found"] {
+  img,
+  svg,
+  [role="img"],
+  [data-zoom] {
+    cursor: zoom-in;
+  }
+}
+
+[data-rmiz-modal]::backdrop {
+  display: none;
+}
+
+[data-rmiz-modal][open] {
+  @apply fixed w-screen h-screen max-w-none max-h-none m-0 p-0 border-0 bg-transparent overflow-hidden;
+}
+
+[data-rmiz-modal-overlay] {
+  @apply absolute inset-0 transition-opacity duration-300;
+  background: rgba(var(--nextra-bg), 0.8);
+}
+
+[data-rmiz-modal-overlay="hidden"] {
+  @apply opacity-0;
+}
+
+[data-rmiz-modal-overlay="visible"] {
+  @apply opacity-100;
+}
+
+[data-rmiz-modal-content] {
+  @apply relative w-full h-full;
+}
+
+[data-rmiz-modal-img] {
+  @apply absolute;
+  cursor: zoom-out;
+  image-rendering: high-quality;
+  transform-origin: top left;
+  transition: transform 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-rmiz-modal-overlay],
+  [data-rmiz-modal-img] {
+    transition-duration: 0.01ms;
+  }
+}
