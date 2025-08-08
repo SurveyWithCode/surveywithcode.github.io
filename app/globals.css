@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @import "./fonts.css";
+@import "./mathfonts.css";
 @import "./colors.css";
 
 @import "../styles/cards.css";
@@ -16,8 +17,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant light (&:where(.light, .light *));
-
-
 
 @layer base {
   :root {
@@ -46,13 +45,17 @@
   }
 
   html {
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1,
-      "ss01" 1,
-      "ss06" 1 !important;
+    font-size: 13.333px;
+    font-feature-settings: "liga", "kern";
+    font-variant-ligatures: common-ligatures discretionary-ligatures;
+    font-kerning: normal;
+    font-variant-numeric: oldstyle-nums;
+    line-height: 1.2;
+    letter-spacing: 0;
+    word-spacing: 0;
+    /* font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss06" 1; */
     font-family:
-      "KaTeX_Main",
+      "SurveyWithCode",
       "Segoe UI",
       TTT,
       ui-sans-serif,
@@ -70,24 +73,16 @@
       Segoe UI Emoji,
       Segoe UI Symbol,
       Noto Color Emoji;
-  }
 
-  html {
     scroll-padding-top: 4rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1,
-      "ss01" 1;
-    -webkit-tap-highlight-color: transparent;
-    font-size: 1rem;
-  }
+    /* font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1; */
 
-  html {
+    font-size: 1rem;
+
     tab-size: 4;
-    font-feature-settings: normal;
-    font-variation-settings: normal;
+    /* font-feature-settings: normal; */
   }
 }
 

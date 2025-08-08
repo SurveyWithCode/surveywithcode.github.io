@@ -45,6 +45,11 @@ export default async function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"></link>
         <link rel="manifest" href="/site.webmanifest"></link>
+
+        <link rel="preload" href="/serif/SurveyWithCode-Bold.woff2" as="font" type="font/woff2" crossorigin></link>
+        <link rel="preload" href="/serif/SurveyWithCode-BoldItalic.woff2" as="font" type="font/woff2" crossorigin></link>
+        <link rel="preload" href="/serif/SurveyWithCode-Regular.woff2" as="font" type="font/woff2" crossorigin></link>
+        <link rel="preload" href="/serif/SurveyWithCode-Italic.woff2" as="font" type="font/woff2" crossorigin></link>
       </head>
       <body className="nextra-banner-hidden">
         <ErrorBoundary>

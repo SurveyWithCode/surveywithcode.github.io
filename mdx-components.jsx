@@ -104,7 +104,7 @@ export function useMDXComponents(components) {
     table: (props) => (
       <Table className="nextra-scrollbar mt-4 p-0 first:mt-0" {...props} />
     ),
-    p: (props) => <p className="mt-4 leading-7 first:mt-0" {...props} />,
+    p: (props) => <p className="mt-4 first:mt-0" {...props} />,
     tr: Tr,
     th: Th,
     td: Td,
