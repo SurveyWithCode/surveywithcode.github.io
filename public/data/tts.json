@@ -1,0 +1,158 @@
+{
+    "name": "TTS",
+    "children": [
+        {
+            "name": "Fast",
+            "children": [
+                {
+                    "name": "Parallel Generation",
+                    "children": [
+                        {
+                            "name": "FastSpeech 1/2, Par.WaveNet, WaveGlow, FloWaveNet, ParaNet, MelGAN, HiFi-GAN, DiffWave, WaveGrad, PriorGrad"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lightweight Model",
+                    "children": [
+                        {
+                            "name": "WaveRNN, LightSpeech, SqueezeWave, Kanagawa, WG, DeviceTTS, LVCNet"
+                        }
+                    ]
+                },
+                {
+                    "name": "Speedup with Domain Knowledge",
+                    "children": [
+                        {
+                            "name": "LPCNet, Multi-Band, FFTNet, Streaming"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Low-Resource",
+            "children": [
+                {
+                    "name": "Self-Supervised Training",
+                    "children": [
+                        {
+                            "name": "Chung et al., Wang et al., Zhang et al., Fang et al., Jia et al., Tjandra et al., Liu et al., Tu et al., Dunbar et al., Chen et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Cross-Lingual Transfer",
+                    "children": [
+                        {
+                            "name": "LRSpeech, Chen et al., Azizah et al., De et al., Yang et al., Prajwal et al., He et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Cross-Speaker Transfer",
+                    "children": [
+                        {
+                            "name": "Luong et al., Huybrechts et al., Yang et al., Dai et al., Chen et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Speech Chain/Back Transformation",
+                    "children": [
+                        {
+                            "name": "SpeechChain, LRSpeech"
+                        }
+                    ]
+                },
+                {
+                    "name": "Dataset Mining in the Wild",
+                    "children": [
+                        {
+                            "name": "Cooper et al., Hu et al., Cooper et al."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Robust",
+            "children": [
+                {
+                    "name": "Enhancing Attention",
+                    "children": [
+                        {
+                            "name": "Tacotron 2, DCTTS, SMA, MultiSpeech, Sotelo et al., Shen et al., Zhang et al., Tachibana et al., Ping et al., Peng et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Replacing Attention with Duration",
+                    "children": [
+                        {
+                            "name": "FastSpeech, DurIAN, EATS, Glow-TTS, Li et al., Beliaev et al., Vainer et al., Zeng et al., Elias et al., Shen et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Enhancing AR",
+                    "children": [
+                        {
+                            "name": "GAN Exposure, Liu et al., Liu et al., Ren et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Replacing AR with NAR",
+                    "children": [
+                        {
+                            "name": "FastSpeech 1/2, ParaNet, EATS, Flow-TTS, Kim et al., Liu et al., Vainer et al., Elias et al."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Expressive",
+            "children": [
+                {
+                    "name": "Modeling Variation Information",
+                    "children": [
+                        {
+                            "name": "GST-Tacotron, Ref-Tacotron, Chen et al., Multi-SpectroGAN, PriorGrad, Choi et al., VAE-TTS, Glow-TTS, Hsu et al., Gururani et al., Akuzawa et al., Valle et al., Habib et al., Sun et al., Du et al., Jeong et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Disentangling/Controlling/Transferring",
+                    "children": [
+                        {
+                            "name": "GMVAE-Tacotron, DenoiSpeech, Ma et al., Hsu et al., Qian et al., UM et al., Lee et al., Neekhara et al., Bae et al., Polyak et al., Li et al., Karlapati et al., Inoue et al., Liu et al., Whitehill et al., Cai et al., Li et al., Habib et al."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Adaptive",
+            "children": [
+                {
+                    "name": "General Adaptation",
+                    "children": [
+                        {
+                            "name": "AdaSpeech 1/3, Cooper et al., Paul et al., Hu et al., Chen et al., Liu et al."
+                        }
+                    ]
+                },
+                {
+                    "name": "Efficient Adaptation",
+                    "children": [
+                        {
+                            "name": "SEA-TTS, DV3-Clone, Kons et al., Zhang et al., Luong et al., SV-Tacotron, AdaSpeech 1/2, Cooper et al."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

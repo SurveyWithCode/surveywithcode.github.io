@@ -139,7 +139,13 @@ const taxonomyData = {
 }
 
 export default function Page() {
-  // const [data, setData] = useState([])
+   const [data, setData] = useState([])
+  
+    useEffect(() => {
+      fetch("/data/tts.json")
+        .then((res) => res.json())
+        .then((data) => setData(data))
+    }, [])
 
   // useEffect(() => {
   //   fetch("/data/flare-2.json")
@@ -150,7 +156,7 @@ export default function Page() {
   return (
     <div>
       <h1 className="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Evaluation</h1>
-      <SurveyTaxonomyTree height={800} taxonomyData={taxonomyData} />
+      <SurveyTaxonomyTree height={1500} taxonomyData={taxonomyData} />
       {/* <TaxonomyDiagram data={taxonomyData} /> */}
       {/* <TaxonomyTree data={taxonomyData} /> */}
       {/* <GrokTaxonomyTree taxonomyData={taxonomyData} /> */}

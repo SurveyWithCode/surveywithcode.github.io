@@ -46,7 +46,7 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
       const lines = wrapText(text, Math.floor(approx / 6))
       const fontSize = level === 1 ? 11 : level === 2 ? 10 : 9
       const lineHeight = fontSize * 1.1 // TikZ-style tighter spacing
-      const padding = 16
+      const padding = 4
       
       // TikZ-style height calculation: account for actual text metrics
       const textHeight = lines.length === 1 
