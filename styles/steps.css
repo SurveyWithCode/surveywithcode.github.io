@@ -1,14 +1,27 @@
-@layer components{
-  .nextra-steps h3 {
-    counter-increment: step;
-  
-    &:before {
-      @apply absolute w-[33px] h-[33px];
-      @apply border-4 border-white bg-gray-100 dark:border-dark dark:bg-neutral-800;
-      @apply rounded-full text-neutral-400 text-base font-normal text-center -indent-px;
-      @apply mt-[3px] ml-[-41px];
-      content: counter(step);
-    }
+@import "tailwindcss";
+
+@theme {
+  --nextra-bg: var(--background, #fff);
+}
+
+.nextra-steps {
+  h2,
+  h3:not([style^="visibility:"]),
+  h4,
+  h5,
+  h6 {
+    counter-increment: var(--counter-id);
+    @apply border-0 pb-0 font-semibold tracking-tight mt-8 text-2xl;
+    @apply before:bg-gray-200 dark:before:bg-neutral-800;
+    @apply before:text-neutral-800 dark:before:text-neutral-300;
   }
-  
+
+  h2:before,
+  h3:not([style^="visibility:"]):before,
+  h4:before,
+  h5:before,
+  h6:before {
+    @apply absolute size-[33px] border-4 border-[--nextra-bg] rounded-full text-base font-normal text-center -indent-px ms-[-41px];
+    content: counter(var(--counter-id));
+  }
 }

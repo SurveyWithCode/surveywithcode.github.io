@@ -1,17 +1,24 @@
+@import "tailwindcss";
+
+:hover > .subheading-anchor {
+  @apply opacity-100;
+}
+
 .subheading-anchor {
-  @apply opacity-0 transition-opacity ltr:ml-1 rtl:mr-1;
+  @apply ms-1 opacity-0 transition;
+}
 
-  :hover > &,
-  &:focus {
-    @apply opacity-100;
-  }
+.subheading-anchor:target,
+.subheading-anchor:focus {
+  @apply opacity-100;
+}
 
-  &:after {
-    @apply content-['#'] px-1;
-    @apply text-gray-300 dark:text-neutral-700;
-    span:target + & {
-      @apply text-gray-400;
-      @apply dark:text-neutral-500;
-    }
-  }
+.subheading-anchor:target:after,
+.subheading-anchor:after {
+  @apply text-gray-600 dark:text-neutral-400;
+}
+
+.subheading-anchor:after {
+  @apply px-1;
+  content: '#';
 }

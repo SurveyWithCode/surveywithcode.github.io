@@ -13,7 +13,7 @@ function Tree({ children }) {
   return (
     <div
       className={cn(
-        "nextra-filetree mt-6 select-none text-sm text-gray-800 dark:text-gray-300",
+        "nextra-filetree mt-4 select-none text-sm text-gray-800 dark:text-gray-300",
         "not-prose" // for nextra-theme-blog
       )}
     >

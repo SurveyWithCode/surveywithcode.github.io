@@ -24,7 +24,7 @@ export function useMDXComponents(components) {
   return {
     h1: (props) => (
       <h1
-        className="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
+        className="my-6 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
         {...props}
       />
     ),
@@ -32,7 +32,7 @@ export function useMDXComponents(components) {
       <h2
         className={cn(
           "font-semibold tracking-tight text-slate-900 dark:text-slate-100",
-          "mt-10 border-b pb-1 text-3xl border-neutral-200/70 contrast-more:border-neutral-400 dark:border-primary-100/10 contrast-more:dark:border-neutral-400"
+          "mt-6 border-b pb-1 text-3xl border-neutral-200/70 contrast-more:border-neutral-400 dark:border-primary-100/10 contrast-more:dark:border-neutral-400"
         )}
         {...props}
       />
@@ -74,13 +74,13 @@ export function useMDXComponents(components) {
       />
     ),
     ul: ({ children }) => (
-      <ul className="mt-6 list-disc first:mt-0 ltr:ml-6 rtl:mr-6">
+      <ul className="mt-4 list-disc first:mt-0 ltr:ml-4 rtl:mr-4">
         {children}
       </ul>
     ),
     ol: (props) => (
       <ol
-        className="mt-6 list-decimal first:mt-0 ltr:ml-6 rtl:mr-6"
+        className="mt-4 list-decimal first:mt-0 ltr:ml-6 rtl:mr-6"
         {...props}
       />
     ),
@@ -88,7 +88,7 @@ export function useMDXComponents(components) {
     blockquote: (props) => (
       <blockquote
         className={cn(
-          "mt-6 border-gray-300 italic text-gray-700 dark:border-gray-700 dark:text-gray-400",
+          "mt-4 border-gray-300 italic text-gray-700 dark:border-gray-700 dark:text-gray-400",
           "first:mt-0 ltr:border-l-2 ltr:pl-6 rtl:border-r-2 rtl:pr-6"
         )}
         {...props}
@@ -102,9 +102,9 @@ export function useMDXComponents(components) {
     ),
     a: Link,
     table: (props) => (
-      <Table className="nextra-scrollbar mt-6 p-0 first:mt-0" {...props} />
+      <Table className="nextra-scrollbar mt-4 p-0 first:mt-0" {...props} />
     ),
-    p: (props) => <p className="mt-6 leading-7 first:mt-0" {...props} />,
+    p: (props) => <p className="mt-4 leading-7 first:mt-0" {...props} />,
     tr: Tr,
     th: Th,
     td: Td,

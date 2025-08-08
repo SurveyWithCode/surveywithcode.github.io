@@ -2,10 +2,12 @@ import React from "react"
 import Github from "../icons/github"
 import Twitter from "../icons/twitter"
 import Navbar from "./navbar"
-import AuthButton from "@/components/auth/auth-button"
+// import AuthButton from "@/components/auth/auth-button"
 import Image from "next/image"
 import Link from "next/link"
 import LogoIcon from "@/icons/logo"
+import MenuHeader from "./menuheader"
+import SearchBar from "./searchbar"
 
 export default function Header() {
   return (
@@ -14,11 +16,8 @@ export default function Header() {
     //     </div>
     //     <nav className="mx-auto flex h-[var(--nextra-navbar-height)] max-w-[90rem] items-center justify-end gap-4 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
     <Navbar>
-      <Link
-        className="flex items-center px-24 hovesr:opacity-75 ltr:mr-auto rtl:ml-auto"
-        href="/"
-      >
-        <LogoIcon className="h-6 w-auto"  alt="logo"/>
+      <Link className="flex items-center px-24 hovesr:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
+        <LogoIcon className="h-6 w-auto" alt="logo" />
         {/* <Image
           src="/logo.png"
           width={200}
@@ -27,10 +26,7 @@ export default function Header() {
           className="h-5 w-auto"
           alt="logo"
         /> */}
-        <span
-          className="max-md:hidden select-none font-extrabold ltr:ml-2 rtl:mr-2"
-          title="SurveyWithCode - From Research to Reproducibility"
-        >
+        <span className="max-md:hidden select-none font-extrabold ltr:ml-2 rtl:mr-2" title="SurveyWithCode - From Research to Reproducibility">
           SurveyWithCode
         </span>
       </Link>
@@ -42,9 +38,11 @@ export default function Header() {
                 </svg>
                 </button>
             </div> */}
-      {/* <a className="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 max-md:hidden whitespace-nowrap text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" aria-current="false" href="/examples/basic">Examples</a> */}
-      {/* <a className="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 max-md:hidden whitespace-nowrap text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" aria-current="false" href="/blog">Blog</a> */}
-      <AuthButton />
+      <SearchBar />
+      <MenuHeader />
+      {/* <a className="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 max-md:hidden whitespace-nowrap text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" aria-current="false" href="/examples/basic">Examples</a>
+      <a className="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 max-md:hidden whitespace-nowrap text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" aria-current="false" href="/blog">Blog</a> */}
+      {/* <AuthButton /> */}
 
       {/* <div className="nextra-search relative md:w-64 max-md:hidden">
                     <div className="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
@@ -53,20 +51,12 @@ export default function Header() {
                             <span className="text-xs">⌘</span>K</kbd>
                     </div>
                 </div> */}
-      
-      <Link
-        href="https://github.com/surveywithcode"
-        target="blank"
-        rel="noreferrer"
-      >
+
+      <Link href="https://github.com/surveywithcode" target="blank" rel="noreferrer">
         <Github />
         <span className="sr-only">GitHub</span>
       </Link>
-      <Link
-        href="https://twitter.com/surveywithcode"
-        target="blank"
-        rel="noreferrer"
-      >
+      <Link href="https://twitter.com/surveywithcode" target="blank" rel="noreferrer">
         <Twitter />
       </Link>
     </Navbar>

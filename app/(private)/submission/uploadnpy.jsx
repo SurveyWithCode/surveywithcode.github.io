@@ -248,7 +248,7 @@ export default function UploadNPY({ codes, user, status }) {
   }
 
   return (
-    <form className="mt-6 flex flex-col px-4 gap-4">
+    <form className="mt-4 flex flex-col px-4 gap-4">
       <div className="flex flex-row items-center gap-4">
         <label htmlFor="name" className="w-[20%] text-right">
           Team Name

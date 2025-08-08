@@ -1,55 +1,77 @@
-:root {
-  --shiki-dark-bg: #2e3440ff;
-  --shiki-dark: #d8dee9 --shiki-light: #2e3440;
+@import "tailwindcss";
+
+@theme {
+  --twoslash-border-color: #8888;
+  --twoslash-underline-color: currentColor;
+  --twoslash-highlighted-border: 195, 125, 13;
+  --twoslash-popup-bg: #f8f8f8;
+  --twoslash-popup-color: inherit;
+  --twoslash-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+  --twoslash-docs-color: #888;
+  --twoslash-docs-font: sans-serif;
+  --twoslash-matched-color: inherit;
+  --twoslash-unmatched-color: #888;
+  --twoslash-cursor-color: #8888;
+  --twoslash-error-color: 212, 86, 86;
+  --twoslash-error-bg: rgba(212, 86, 86, 0.13);
+  --twoslash-tag-color: 55, 114, 207;
+  --twoslash-tag-warn-color: 195, 125, 13;
+  --twoslash-tag-annotate-color: 27, 166, 115;
+}
+
+.dark {
+  --twoslash-popup-bg: #000;
+  --twoslash-border-color: #404040;
 }
 
 .nextra-code span {
-  @apply bg-[--shiki-light-bg] text-[:state(shiki-light)];
-  @apply dark:bg-[--shiki-dark-bg] dark:text-[:state(shiki-dark)];
+  @apply bg-[--shiki-light-bg] text-[--shiki-light];
+  @apply dark:bg-[--shiki-dark-bg] dark:text-[--shiki-dark];
 }
 
-code:not([class*="twoslash-"]) {
+code.nextra-code {
   box-decoration-break: slice;
   font-feature-settings:
     "rlig" 1,
     "calt" 1,
     "ss01" 1;
-
-  :not(pre) > & {
-    @apply border-black/3 bg-black/3 break-words rounded-md border py-0.5 px-[.25em] text-[.9em];
-    @apply dark:border-white/10 dark:bg-white/10;
-  }
+  @apply text-sm;
 }
 
-pre code:not([class*="twoslash-"]) {
-  @apply grid text-sm;
+code.nextra-code:not(pre > *):not([class*="twoslash-"]) {
+  @apply p-[0.12em_0.25em] rounded-[0.375em] border-black/5 bg-black/5 break-words border text-[0.9em];
+  @apply dark:border-white/10 dark:bg-white/10;
+}
 
-  &[data-line-numbers] > span {
-    @apply pl-2;
+pre code.nextra-code:not([class*="twoslash-"]) {
+  @apply grid;
+  counter-reset: line;
+}
 
-    &::before {
-      counter-increment: line;
-      content: counter(line);
-      @apply float-left pr-4 text-right min-w-[2.6rem] text-gray-500;
-    }
-  }
+pre code.nextra-code:not([class*="twoslash-"])[data-line-numbers] > span {
+  @apply pl-2;
+}
 
-  & > span {
-    @apply px-4;
+pre code.nextra-code:not([class*="twoslash-"])[data-line-numbers] > span::before {
+  @apply inline-block pr-4 text-right min-w-[2.6rem] text-gray-600 dark:text-gray-400;
+  counter-increment: line;
+  content: counter(line);
+}
 
-    &[data-highlighted-line] {
-      @apply bg-primary-600/10 dark:bg-primary-600/20 !text-primary-600/80 shadow-[2px0currentColorinset];
-    }
+pre code.nextra-code:not([class*="twoslash-"]) > span {
+  @apply px-4;
+}
 
-    [data-highlighted-chars] {
-      @apply rounded-sm ring-2 ring-primary-600/20 dark:ring-primary-600/40;
-      @apply bg-primary-600/20 dark:bg-primary-600/40;
-    }
-  }
+pre code.nextra-code:not([class*="twoslash-"]) > span[data-highlighted-line] {
+  @apply bg-primary-600/10 dark:bg-primary-600/20 !text-primary-600/80 shadow-[inset_2px_0_0_currentColor];
+}
 
-  html[data-nextra-word-wrap] & {
-    @apply max-md:whitespace-pre-wrap;
-  }
+pre code.nextra-code:not([class*="twoslash-"]) > span [data-highlighted-chars] {
+  @apply rounded-sm ring-2 ring-primary-600/20 dark:ring-primary-600/40 bg-primary-600/20 dark:bg-primary-600/40;
+}
+
+html[data-nextra-word-wrap] pre code.nextra-code:not([class*="twoslash-"]) {
+  @apply max-md:whitespace-pre-wrap;
 }
 
 .nextra-copy-icon {
@@ -65,45 +87,12 @@ pre code:not([class*="twoslash-"]) {
   }
 }
 
-/* ===== Basic ===== */
-:root {
-  --twoslash-border-color: #8888;
-  --twoslash-underline-color: currentColor;
-  --twoslash-highlighted-border: #c37d0d50;
-  --twoslash-highlighted-bg: #c37d0d20;
-  --twoslash-popup-bg: #f8f8f8;
-  --twoslash-popup-color: inherit;
-  --twoslash-popup-shadow: rgba(0, 0, 0.08) 0px 1px 4px;
-  --twoslash-docs-color: #888;
-  --twoslash-docs-font: sans-serif;
-  --twoslash-code-font: inherit;
-  --twoslash-code-font-size: 1em;
-  --twoslash-matched-color: inherit;
-  --twoslash-unmatched-color: #888;
-  --twoslash-cursor-color: #8888;
-  --twoslash-error-color: #d45656;
-  --twoslash-error-bg: #d4565620;
-  --twoslash-tag-color: #3772cf;
-  --twoslash-tag-bg: #3772cf20;
-  --twoslash-tag-warn-color: #c37d0d;
-  --twoslash-tag-warn-bg: #c37d0d20;
-  --twoslash-tag-annotate-color: #1ba673;
-  --twoslash-tag-annotate-bg: #1ba67320;
-}
-
-.dark {
-  --twoslash-popup-bg: #000;
-  --twoslash-border-color: #404040;
-}
-
-/* Respect people's wishes to not have animations */
 @media (prefers-reduced-motion: reduce) {
   .twoslash * {
     transition: none !important;
   }
 }
 
-/* ===== Hover Info ===== */
 .twoslash:hover .twoslash-hover {
   border-color: var(--twoslash-underline-color);
 }
@@ -116,15 +105,12 @@ pre code:not([class*="twoslash-"]) {
 }
 
 .twoslash-popup-container {
-  @apply inline-flex flex-col opacity-0 absolute transition-opacity duration-300 z-10 mt-1.5 rounded;
+  @apply inline-flex flex-col absolute transition-opacity duration-300 z-10 mt-1.5 rounded;
   transform: translateY(1.1em);
   background: var(--twoslash-popup-bg) !important;
   color: var(--twoslash-popup-color);
   border: 1px solid var(--twoslash-border-color);
-  pointer-events: none;
-  user-select: none;
   text-align: left;
-  /*box-shadow: var(--twoslash-popup-shadow);*/
 }
 
 .twoslash-query-presisted .twoslash-popup-container {
@@ -132,19 +118,10 @@ pre code:not([class*="twoslash-"]) {
   transform: translateY(1.5em);
 }
 
-.twoslash-hover:hover .twoslash-popup-container,
-.twoslash-query-presisted .twoslash-popup-container {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.twoslash-popup-container:hover {
-  user-select: auto;
-}
-
 .twoslash-popup-arrow {
-  @apply absolute -top-1 border-t border-r size-1.5 -rotate-45;
-  @apply border-[--twoslash-border-color] bg-[--twoslash-popup-bg];
+  @apply absolute -top-1 border-t border-r size-3 -rotate-45;
+  border-color: var(--twoslash-border-color);
+  background: var(--twoslash-popup-bg);
   left: 1em;
   pointer-events: none;
 }
@@ -154,15 +131,10 @@ pre code:not([class*="twoslash-"]) {
   padding: 6px 8px;
 }
 
-.twoslash-popup-code {
-  font-family: var(--twoslash-code-font);
-  font-size: var(--twoslash-code-font-size);
-}
-
 .twoslash-popup-docs {
+  @apply text-sm;
   color: var(--twoslash-docs-color);
   font-family: var(--twoslash-docs-font);
-  font-size: 0.8em;
   border-top: 1px solid var(--twoslash-border-color);
 }
 
@@ -177,16 +149,11 @@ pre code:not([class*="twoslash-"]) {
   margin-right: 0.5em;
 }
 
-.twoslash-popup-docs-tag-name {
-  font-family: var(--twoslash-code-font);
-}
-
-/* ===== Error Line ===== */
 .twoslash-error-line {
   position: relative;
   background-color: var(--twoslash-error-bg);
-  border-left: 3px solid var(--twoslash-error-color);
-  color: var(--twoslash-error-color);
+  border-left: 3px solid currentColor;
+  color: rgb(var(--twoslash-error-color));
   padding: 6px 12px;
   margin: 0.2em 0;
 }
@@ -197,7 +164,6 @@ pre code:not([class*="twoslash-"]) {
   padding-bottom: 2px;
 }
 
-/* ===== Completeions ===== */
 .twoslash-completion-cursor {
   position: relative;
 }
@@ -211,11 +177,6 @@ pre code:not([class*="twoslash-"]) {
 
 .twoslash-completion-list {
   @apply py-1 px-2 w-60;
-  font-size: 0.8rem;
-}
-
-.twoslash-completion-list:hover {
-  user-select: auto;
 }
 
 .twoslash-completion-list::before {
@@ -249,28 +210,25 @@ pre code:not([class*="twoslash-"]) {
   color: var(--twoslash-matched-color);
 }
 
-/* Highlights */
 .twoslash-highlighted {
-  background-color: var(--twoslash-highlighted-bg);
-  border: 1px solid var(--twoslash-highlighted-border);
+  background-color: rgba(var(--twoslash-highlighted-border), 0.13);
+  border: 1px solid rgba(var(--twoslash-highlighted-border), 0.31);
   padding: 1px 2px;
   margin: -1px -3px;
   border-radius: 4px;
 }
 
-/* Icons */
 .twoslash-completion-list .twoslash-completions-icon {
   color: var(--twoslash-unmatched-color);
   width: 1em;
   flex: none;
 }
 
-/* Custom Tags */
 .twoslash-tag-line {
   position: relative;
-  background-color: var(--twoslash-tag-bg);
-  border-left: 3px solid var(--twoslash-tag-color);
-  color: var(--twoslash-tag-color);
+  background-color: rgba(var(--twoslash-tag-color), 0.13);
+  border-left: 3px solid currentColor;
+  color: rgb(var(--twoslash-tag-color));
   padding: 6px 10px;
   margin: 0.2em 0;
   display: flex;
@@ -285,18 +243,15 @@ pre code:not([class*="twoslash-"]) {
 
 .twoslash-tag-line.twoslash-tag-error-line {
   background-color: var(--twoslash-error-bg);
-  border-left: 3px solid var(--twoslash-error-color);
-  color: var(--twoslash-error-color);
+  color: rgb(var(--twoslash-error-color));
 }
 
 .twoslash-tag-line.twoslash-tag-warn-line {
-  background-color: var(--twoslash-tag-warn-bg);
-  border-left: 3px solid var(--twoslash-tag-warn-color);
-  color: var(--twoslash-tag-warn-color);
+  background-color: rgba(var(--twoslash-tag-warn-color), 0.13);
+  color: rgb(var(--twoslash-tag-warn-color));
 }
 
 .twoslash-tag-line.twoslash-tag-annotate-line {
-  background-color: var(--twoslash-tag-annotate-bg);
-  border-left: 3px solid var(--twoslash-tag-annotate-color);
-  color: var(--twoslash-tag-annotate-color);
+  background-color: rgba(var(--twoslash-tag-annotate-color), 0.13);
+  color: rgb(var(--twoslash-tag-annotate-color));
 }

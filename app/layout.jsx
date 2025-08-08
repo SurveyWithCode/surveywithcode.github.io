@@ -31,7 +31,6 @@ export default async function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico"></link>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossOrigin="anonymous" />
         <meta
           name="description"
           content="SurveyWithCode is a curated platform that connects research survey papers with their corresponding implementations, codebases, and benchmarks. Designed for the AI and ML research community, it enables fast discovery of state-of-the-art summaries alongside practical code resources, accelerating understanding, comparison, and experimentation."
@@ -40,7 +39,7 @@ export default async function RootLayout({ children }) {
         <meta name="author" content="Survey With Code" />
 
         <meta name="theme-color" content="#ffffff"></meta>
-        <title>SurveyWithCode - From Research to Reproducibility</title>
+        <title>SurveyWithCode (代码综述) - From Research to Reproducibility</title>
 
         <link rel="icon" type="image/png" href="/favicon.png"></link>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>

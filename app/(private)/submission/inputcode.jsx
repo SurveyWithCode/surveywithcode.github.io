@@ -23,7 +23,7 @@ export default function InputCode({ codes }) {
     document.body.removeChild(link)
   }
   return (
-    <div className="flex flex-row items-center gap-4 mt-6">
+    <div className="flex flex-row items-center gap-4 mt-4">
       <label htmlFor="inputcode" className="flex justify-end w-[15%]">
         Input Codes
       </label>

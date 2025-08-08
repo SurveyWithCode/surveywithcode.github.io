@@ -30,7 +30,7 @@ export default function Page() {
 
   return (
     <>
-      <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Submission</h1>
+      <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Submission</h1>
       {/* <h2 className="font-semibold tracking-tight text-slate-900 dark:text-slate-100 mt-10 border-b pb-1 text-3xl border-neutral-200/70 contrast-more:border-neutral-400 dark:border-primary-100/10 contrast-more:dark:border-neutral-400">
         Download input code
       </h2>
@@ -56,7 +56,7 @@ export default function Page() {
       <h2 className="font-semibold tracking-tight text-slate-900 dark:text-slate-100 mt-10 border-b pb-1 text-3xl border-neutral-200/70 contrast-more:border-neutral-400 dark:border-primary-100/10 contrast-more:dark:border-neutral-400">
         Upload NPY files
       </h2>
-      <div className="mt-6 mb-32">
+      <div className="mt-4 mb-32">
         {isLoading || status === "loading" ? (
           <div className="w-full px-12  justify-center">
             <p className="flex justify-center p-4 gap-2">
