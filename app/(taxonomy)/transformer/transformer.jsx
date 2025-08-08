@@ -19,7 +19,7 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
       .attr("height", height)
       .style("font", "12px")
 
-    const g = svg.append("g").attr("transform", `translate(60, ${height / 2})`)
+    const g = svg.append("g").attr("transform", `translate(${width / 2}, ${height / 2})`)
 
     let i = 0
     const duration = 750
@@ -83,26 +83,50 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
       const nodes = treeData.descendants()
       const links = treeData.links()
 
-      // Normalize for fixed-depth and adjust positioning
+      // First, set up the hierarchy positions
       nodes.forEach((d) => {
-        d._x = d.x - height / 2 // center vertically
-        // Custom positioning for each level
+        // Custom Y positioning for taxonomy hierarchy
         switch (d.depth) {
           case 0:
-            d._y = 0 // Root at origin
+            d.y = 0 // Root at origin
             break
           case 1:
-            d._y = 140 // First level close to root
+            d.y = 140 // First level close to root
             break
           case 2:
-            d._y = 300 // Second level
+            d.y = 300 // Second level
             break
           case 3:
-            d._y = 480 // Third level
+            d.y = 480 // Third level
             break
           default:
-            d._y = 480 + (d.depth - 3) * 180 // Deeper levels
+            d.y = 480 + (d.depth - 3) * 180 // Deeper levels
         }
+      })
+
+      // Calculate bounds of ALL nodes including their rectangle sizes
+      let minX = Infinity, maxX = -Infinity
+      let minY = Infinity, maxY = -Infinity
+
+      nodes.forEach((d) => {
+        const { w, h } = calcRect(d.data.name, d.depth)
+        minX = Math.min(minX, d.x - w/2)
+        maxX = Math.max(maxX, d.x + w/2)
+        minY = Math.min(minY, d.y - h/2)
+        maxY = Math.max(maxY, d.y + h/2)
+      })
+
+      // Calculate the center point of ALL nodes
+      const treeCenterX = (minX + maxX) / 2
+      const treeCenterY = (minY + maxY) / 2
+      
+      console.log('Tree bounds:', { minX, maxX, minY, maxY })
+      console.log('Tree center:', { treeCenterX, treeCenterY })
+      
+      // Now apply centering offset to ALL nodes
+      nodes.forEach((d) => {
+        d._x = d.x - treeCenterX // Center horizontally based on all nodes
+        d._y = d.y - treeCenterY // Center vertically based on all nodes
       })
 
       // Update the nodes
