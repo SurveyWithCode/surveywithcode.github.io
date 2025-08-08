@@ -87,7 +87,6 @@ const TaxonomyDiagram = ({ data }) => {
         (d) => `
         <div style="
           font-size: 9px;
-          line-height: 1.2;
           padding: 4px;
           background: #f8f8f8;
           border-radius: 4px;

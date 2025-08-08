@@ -311,22 +311,11 @@ export default function SurveyTaxonomyTree({ height = 800, taxonomyData }) {
     // Initialize the display
     update(root)
 
-    // Zoom + pan with limits and center-aligned zooming
+    // Zoom + pan
     svg.call(
-      d3.zoom()
-        .scaleExtent([0.1, 3]) // Set zoom limits: min 0.1x, max 3x
-        .on("zoom", (event) => {
-          const { transform } = event
-          
-          // Keep zoom centered - maintain the original center position
-          const centerX = width / 2
-          const centerY = height / 2
-          
-          // Apply transform while keeping center alignment
-          g.attr("transform", 
-            `translate(${centerX}, ${centerY}) scale(${transform.k}) translate(${transform.x / transform.k}, ${transform.y / transform.k})`
-          )
-        })
+      d3.zoom().on("zoom", (event) => {
+        g.attr("transform", event.transform)
+      })
     )
 
     // Add resize listener
