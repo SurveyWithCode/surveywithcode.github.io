@@ -150,7 +150,7 @@ export default function Page() {
   return (
     <div>
       <h1 className="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Evaluation</h1>
-      <SurveyTaxonomyTree width={1200} height={800} taxonomyData={taxonomyData} />
+      <SurveyTaxonomyTree height={800} taxonomyData={taxonomyData} />
       {/* <TaxonomyDiagram data={taxonomyData} /> */}
       {/* <TaxonomyTree data={taxonomyData} /> */}
       {/* <GrokTaxonomyTree taxonomyData={taxonomyData} /> */}
