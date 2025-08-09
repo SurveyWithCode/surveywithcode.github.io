@@ -1,6 +1,6 @@
 "use client"
 
-import { Callout } from "@/nextra"
+import { Callout } from "@/coreui"
 import React, { Component } from "react"
 
 class ErrorBoundary extends Component {

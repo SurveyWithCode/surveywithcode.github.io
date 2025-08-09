@@ -2,8 +2,8 @@
 
 import cn from 'clsx'
 import { useCallback, useRef } from 'react'
-import { Button, classes } from '@/nextra/button'
-import { CopyToClipboard } from '@/nextra/copy-to-clipboard'
+import { Button, classes } from '@/coreui/button'
+import { CopyToClipboard } from '@/coreui/copy-to-clipboard'
 
 export function Pre({
     children,

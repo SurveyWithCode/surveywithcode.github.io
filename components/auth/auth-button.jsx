@@ -6,7 +6,7 @@ import BoardIcon from "../../icons/board"
 import Image from "next/image"
 import { clsx as cn } from "clsx"
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react"
-import { ArrowRightIcon } from "@/nextra/icons"
+import { ArrowRightIcon } from "@/coreui/icons"
 import Link from "next/link"
 import { useAuth } from "@/contexts/auth"
 

@@ -3,7 +3,7 @@
 import { useMenu } from "@/contexts/menu"
 import { useContext } from "react"
 import { Separator } from "./Separator"
-import { Anchor } from "@/nextra/anchor"
+import { Anchor } from "@/coreui/anchor"
 import cn from "clsx"
 import { useActiveAnchor } from "@/contexts/active-anchor"
 import { useRouter } from "next/navigation"

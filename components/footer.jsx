@@ -1,4 +1,4 @@
-import { ThemeSwitch } from "@/nextra"
+import { ThemeSwitch } from "@/coreui"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"

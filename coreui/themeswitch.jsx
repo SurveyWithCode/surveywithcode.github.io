@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { MoonIcon, SunIcon } from '@/nextra/icons'
+import { MoonIcon, SunIcon } from '@/coreui/icons'
 import { useMounted } from '@/utils/hooks/use-mounted'
 import { useTheme } from 'next-themes'
 import { Select } from './select'

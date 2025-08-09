@@ -2,7 +2,7 @@
 
 import cn from "clsx"
 // import { useFSRoute, useMounted } from "@/nextra/hooks"
-import { ArrowRightIcon, ExpandIcon } from "@/nextra/icons"
+import { ArrowRightIcon, ExpandIcon } from "@/coreui/icons"
 import {
   createContext,
   memo,
@@ -15,10 +15,10 @@ import {
 import scrollIntoView from "scroll-into-view-if-needed"
 // import { useActiveAnchor, useMenu, useThemeConfig } from "../contexts"
 // import { renderComponent } from '../utils'
-import { Anchor } from "@/nextra/anchor"
-import { Collapse } from "@/nextra/collapse"
+import { Anchor } from "@/coreui/anchor"
+import { Collapse } from "@/coreui/collapse"
 // import { LocaleSwitch } from "@/nextra/locale-switch"
-import { renderComponent } from "@/nextra/utils/render"
+import { renderComponent } from "@/coreui/utils/render"
 import { useMenu } from "@/contexts/menu"
 import { useMounted } from "@/utils/hooks/use-mounted"
 

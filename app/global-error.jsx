@@ -1,6 +1,6 @@
 "use client" // Error boundaries must be Client Components
 
-import { Callout } from "@/nextra"
+import { Callout } from "@/coreui"
 import { useEffect } from "react"
 
 export default function Error({ error, reset }) {

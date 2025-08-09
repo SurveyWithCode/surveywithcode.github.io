@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react"
 import { useDropzone } from "react-dropzone"
-import { Callout } from "@/nextra"
+import { Callout } from "@/coreui"
 import { Loading } from "@/components/loading/loading"
 import axios from "axios"
 import BVHFile from "@/icons/bvhfile"

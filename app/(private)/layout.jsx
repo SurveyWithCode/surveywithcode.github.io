@@ -1,7 +1,7 @@
 import { ErrorBoundary } from "@/components/ErrorBoundary"
 import Sidebar from "@/components/sidebar"
-import { Callout } from "@/nextra"
-import { File } from "@/nextra/sidebar"
+import { Callout } from "@/coreui"
+import { File } from "@/coreui/sidebar"
 // import { Sidebar } from "@/nextra/sidebar"
 import React from "react"
 
