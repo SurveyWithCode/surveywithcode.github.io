@@ -80,13 +80,15 @@ export default async function RootLayout({ children }) {
         <link rel="preload" href="/serif/SurveyWithCode-Regular.woff2" as="font" type="font/woff2"></link>
         <link rel="preload" href="/serif/SurveyWithCode-Italic.woff2" as="font" type="font/woff2"></link> */}
       </head>
-      <body className="nextra-banner-hidden">
+      <body className="nextra-banner-hidden overflow-x-hidden">
         <ErrorBoundary>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <AuthProvider>
-              <div dir="ltr">
+              <div dir="ltr" className="min-h-screen w-full">
                 <Header />
-                {children}
+                <div className="w-full">
+                  {children}
+                </div>
                 <Footer />
               </div>
             </AuthProvider>

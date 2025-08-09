@@ -120,9 +120,27 @@
     margin-left: calc(-50vw + 50%);
   }
 
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Ensure all containers respect viewport width */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   @media (max-width: 768px) {
     .md-hide {
       display: none !important;
+    }
+    
+    /* Ensure mobile content fits */
+    .mobile-container {
+      padding: 0.5rem;
+      margin: 0;
+      width: 100%;
     }
   }
 }

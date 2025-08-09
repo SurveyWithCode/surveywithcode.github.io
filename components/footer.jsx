@@ -7,7 +7,7 @@ import LogoIcon from "@/icons/logo"
 export default function Footer() {
   return (
     <footer className="bg-gray-100 pb-[env(safe-area-inset-bottom)] dark:bg-neutral-900 print:bg-transparent">
-      <div className="mx-auto flex max-w-[90rem] gap-2 py-2 px-4 ">
+      <div className="mx-auto flex max-w-[90rem] gap-2 py-2 px-2 sm:px-4">
         {/* <button
           title="Change language"
           className="h-7 rounded-md px-2 text-left text-xs font-medium text-gray-600 transition-colors dark:text-gray-400 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100/5 dark:hover:text-gray-50"
@@ -31,15 +31,15 @@ export default function Footer() {
         <ThemeSwitch />
       </div>
       <hr className="dark:border-neutral-800" />
-      <div className="mx-auto flex max-w-[90rem] justify-center py-4 text-gray-600 dark:text-gray-400 md:justify-end pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
-        <a className="focus-visible:nextra-focus flex flex-col  items-start gap-2" target="_blank" rel="noreferrer" title="surveywithcode.com" href="https://surveywithcode.com">
+      <div className="mx-auto flex max-w-[90rem] justify-center py-4 text-gray-600 dark:text-gray-400 md:justify-end pl-2 pr-2 sm:pl-[max(env(safe-area-inset-left),1.5rem)] sm:pr-[max(env(safe-area-inset-right),1.5rem)]">
+        <a className="focus-visible:nextra-focus flex flex-col items-center md:items-start gap-2" target="_blank" rel="noreferrer" title="surveywithcode.com" href="https://surveywithcode.com">
           {/* <div className="flex w-full justify-between font-light gap-2">
             <span className="font-semibold">Powered by</span>
             <span>© 2025</span>
           </div> */}
-          <div className="flex gap-2">
-            <LogoIcon className="w-20" />
-            <span className="font-bold w-14 leading-5">Survey With Code</span>
+          <div className="flex gap-2 items-center">
+            <LogoIcon className="w-16 sm:w-20" />
+            <span className="font-bold text-sm sm:text-base w-12 sm:w-14 leading-4 sm:leading-5">Survey With Code</span>
           </div>
         </a>
       </div>

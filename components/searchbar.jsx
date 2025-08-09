@@ -4,12 +4,12 @@ import Link from "next/link"
 
 export default function SearchBar() {
   return (
-    <div className="max-md:hidden px-16">
+    <div className="max-md:hidden px-2 sm:px-4 lg:px-16">
       <div className="nextra-search relative flex items-center text-gray-900 dark:text-gray-300 contrast-more:text-gray-800 contrast-more:dark:text-gray-300">
         <input
           spellCheck="false"
           autoComplete="off"
-          className="rounded-lg px-3 py-2 transition-all w-full md:w-96 text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 placeholder:text-gray-600 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current [&amp;::-webkit-search-cancel-button]:appearance-none"
+          className="rounded-lg px-3 py-2 transition-all w-full md:w-64 lg:w-96 text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 placeholder:text-gray-600 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current [&amp;::-webkit-search-cancel-button]:appearance-none"
           placeholder="Search"
           role="combobox"
           type="search"
