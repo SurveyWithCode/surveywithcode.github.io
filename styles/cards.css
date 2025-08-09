@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 @theme {
   --rows: 3; /* Default value for --rows, adjust as needed */
 }

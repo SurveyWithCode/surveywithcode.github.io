@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 @theme {
   --nextra-bg: var(--background, #fff);
 }
