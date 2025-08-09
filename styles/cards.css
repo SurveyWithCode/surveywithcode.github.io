@@ -2,11 +2,11 @@
   --rows: 3; /* Default value for --rows, adjust as needed */
 }
 
-.nextra-cards {
+.swr-cards {
   grid-template-columns: repeat(auto-fill, minmax(max(250px, calc((100% - 1rem * 2) / var(--rows))), 1fr));
 }
 
-.nextra-card {
+.swr-card {
   img {
     @apply select-none;
   }

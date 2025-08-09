@@ -22,12 +22,12 @@
   --twoslash-border-color: #404040;
 }
 
-.nextra-code span {
+.swr-code span {
   @apply bg-[--shiki-light-bg] text-[--shiki-light];
   @apply dark:bg-[--shiki-dark-bg] dark:text-[--shiki-dark];
 }
 
-code.nextra-code {
+code.swr-code {
   box-decoration-break: slice;
   font-feature-settings:
     "rlig" 1,
@@ -36,43 +36,43 @@ code.nextra-code {
   @apply text-sm;
 }
 
-code.nextra-code:not(pre > *):not([class*="twoslash-"]) {
+code.swr-code:not(pre > *):not([class*="twoslash-"]) {
   @apply p-[0.12em_0.25em] rounded-[0.375em] border-black/5 bg-black/5 break-words border text-[0.9em];
   @apply dark:border-white/10 dark:bg-white/10;
 }
 
-pre code.nextra-code:not([class*="twoslash-"]) {
+pre code.swr-code:not([class*="twoslash-"]) {
   @apply grid;
   counter-reset: line;
 }
 
-pre code.nextra-code:not([class*="twoslash-"])[data-line-numbers] > span {
+pre code.swr-code:not([class*="twoslash-"])[data-line-numbers] > span {
   @apply pl-2;
 }
 
-pre code.nextra-code:not([class*="twoslash-"])[data-line-numbers] > span::before {
+pre code.swr-code:not([class*="twoslash-"])[data-line-numbers] > span::before {
   @apply inline-block pr-4 text-right min-w-[2.6rem] text-gray-600 dark:text-gray-400;
   counter-increment: line;
   content: counter(line);
 }
 
-pre code.nextra-code:not([class*="twoslash-"]) > span {
+pre code.swr-code:not([class*="twoslash-"]) > span {
   @apply px-4;
 }
 
-pre code.nextra-code:not([class*="twoslash-"]) > span[data-highlighted-line] {
+pre code.swr-code:not([class*="twoslash-"]) > span[data-highlighted-line] {
   @apply bg-primary-600/10 dark:bg-primary-600/20 !text-primary-600/80 shadow-[inset_2px_0_0_currentColor];
 }
 
-pre code.nextra-code:not([class*="twoslash-"]) > span [data-highlighted-chars] {
+pre code.swr-code:not([class*="twoslash-"]) > span [data-highlighted-chars] {
   @apply rounded-sm ring-2 ring-primary-600/20 dark:ring-primary-600/40 bg-primary-600/20 dark:bg-primary-600/40;
 }
 
-html[data-nextra-word-wrap] pre code.nextra-code:not([class*="twoslash-"]) {
+html[data-swr-word-wrap] pre code.swr-code:not([class*="twoslash-"]) {
   @apply max-md:whitespace-pre-wrap;
 }
 
-.nextra-copy-icon {
+.swr-copy-icon {
   animation: fade-in 0.3s ease forwards;
 }
 

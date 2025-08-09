@@ -99,7 +99,7 @@ export function Sidebar({
 
       <aside
         className={cn(
-          "nextra-sidebar-container flex flex-col",
+          "swr-sidebar-container flex flex-col",
           "md:top-16 md:shrink-0 motion-reduce:transform-none",
           "transform-gpu transition-all ease-in-out",
           "print:hidden",
@@ -126,14 +126,14 @@ export function Sidebar({
             <div
               className={cn(
                 "overflow-y-auto overflow-x-hidden",
-                "p-4 grow md:h-[calc(100vh-var(--nextra-navbar-height)-var(--nextra-menu-height))]",
-                showSidebar ? "nextra-scrollbar" : "no-scrollbar"
+                "p-4 grow md:h-[calc(100vh-var(--swr-navbar-height)-var(--swr-menu-height))]",
+                showSidebar ? "swr-scrollbar" : "no-scrollbar"
               )}
               ref={sidebarRef}
             >
               {mounted && window.innerWidth < 768 && (
                 <Menu
-                  className="nextra-menu-mobile md:hidden"
+                  className="swr-menu-mobile md:hidden"
                   // The mobile dropdown menu, shows all the directories.
                   directories={fullDirectories}
                   // Always show the anchor links on mobile (`md`).
@@ -146,7 +146,7 @@ export function Sidebar({
         {/* {(!asPopover || !showSidebar) && (
                 <Collapse isOpen={showSidebar} horizontal>
                   <Menu
-                    className="nextra-menu-desktop max-md:hidden"
+                    className="swr-menu-desktop max-md:hidden"
                     // The sidebar menu, shows only the docs directories.
                     directories={docsDirectories}
                     // When the viewport size is larger than `md`, hide the anchors in

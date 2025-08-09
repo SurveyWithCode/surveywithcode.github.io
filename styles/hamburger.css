@@ -1,4 +1,4 @@
-.nextra-hamburger svg {
+.swr-hamburger svg {
   g {
     @apply origin-center;
     transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);

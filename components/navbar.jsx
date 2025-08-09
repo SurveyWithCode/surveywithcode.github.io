@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Navbar({ children }) {
     return (
-        <div className="nextra-nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
-            <div className="nextra-navbar-blur absolute -z-1 size-full nextra-border backdrop-blur-md bg-nextra-bg/70"></div>
-            <nav className="mx-auto flex h-[var(--nextra-navbar-height)] max-w-[90rem] items-center justify-end gap-2 sm:gap-4 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),1rem)] sm:pl-[max(env(safe-area-inset-left),1.5rem)] sm:pr-[max(env(safe-area-inset-right),1.5rem)]">
+        <div className="swr-nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
+            <div className="swr-navbar-blur absolute -z-1 size-full swr-border backdrop-blur-md bg-swr-bg/70"></div>
+            <nav className="mx-auto flex h-[var(--swr-navbar-height)] max-w-[90rem] items-center justify-end gap-2 sm:gap-4 pl-[max(env(safe-area-inset-left),1rem)] pr-[max(env(safe-area-inset-right),1rem)] sm:pl-[max(env(safe-area-inset-left),1.5rem)] sm:pr-[max(env(safe-area-inset-right),1.5rem)]">
                 {children}
                 {/* {themeConfig.logoLink ? (
           <NextLink
@@ -89,7 +89,7 @@ export default function Navbar({ children }) {
                 {/* <button
           type="button"
           aria-label="Menu"
-          className="nextra-hamburger rounded active:bg-gray-400/20 md:hidden"
+          className="swr-hamburger rounded active:bg-gray-400/20 md:hidden"
           onClick={() => setMenu(!menu)}
         >
           <MenuIcon className={cn({ open: menu })} />

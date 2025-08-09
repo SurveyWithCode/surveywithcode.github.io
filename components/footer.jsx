@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
       <hr className="dark:border-neutral-800" />
       <div className="mx-auto flex max-w-[90rem] justify-center py-4 text-gray-600 dark:text-gray-400 md:justify-end pl-2 pr-2 sm:pl-[max(env(safe-area-inset-left),1.5rem)] sm:pr-[max(env(safe-area-inset-right),1.5rem)]">
-        <a className="focus-visible:nextra-focus flex flex-col items-center md:items-start gap-2" target="_blank" rel="noreferrer" title="surveywithcode.com" href="https://surveywithcode.com">
+        <a className="focus-visible:swr-focus flex flex-col items-center md:items-start gap-2" target="_blank" rel="noreferrer" title="surveywithcode.com" href="https://surveywithcode.com">
           {/* <div className="flex w-full justify-between font-light gap-2">
             <span className="font-semibold">Powered by</span>
             <span>© 2025</span>

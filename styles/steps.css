@@ -1,8 +1,8 @@
 @theme {
-  --nextra-bg: var(--background, #fff);
+  --swr-bg: var(--background, #fff);
 }
 
-.nextra-steps {
+.swr-steps {
   h2,
   h3:not([style^="visibility:"]),
   h4,
@@ -19,7 +19,7 @@
   h4:before,
   h5:before,
   h6:before {
-    @apply absolute size-[33px] border-4 border-[--nextra-bg] rounded-full text-base font-normal text-center -indent-px ms-[-41px];
+    @apply absolute size-[33px] border-4 border-[--swr-bg] rounded-full text-base font-normal text-center -indent-px ms-[-41px];
     content: counter(var(--counter-id));
   }
 }

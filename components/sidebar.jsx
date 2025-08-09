@@ -84,11 +84,11 @@ export default function Sidebar() {
       >
         <File items={items} anchors={anchors} />
       </OnFocusItemContext.Provider> */}
-      <aside className="nextra-sidebar-container flex flex-col md:top-16 md:shrink-0 motion-reduce:transform-none transform-gpu transition-all ease-in-out print:hidden md:w-64 md:sticky md:self-start max-md:[transform:translate3d(0,-100%,0)]">
-        <div className="overflow-y-auto overflow-x-hidden p-4 grow md:h-[calc(100vh-var(--nextra-navbar-height)-var(--nextra-menu-height))] nextra-scrollbar">
+      <aside className="swr-sidebar-container flex flex-col md:top-16 md:shrink-0 motion-reduce:transform-none transform-gpu transition-all ease-in-out print:hidden md:w-64 md:sticky md:self-start max-md:[transform:translate3d(0,-100%,0)]">
+        <div className="overflow-y-auto overflow-x-hidden p-4 grow md:h-[calc(100vh-var(--swr-navbar-height)-var(--swr-menu-height))] swr-scrollbar">
           <div className="transform-gpu overflow-hidden transition-all ease-in-out motion-reduce:transition-none">
             <div className="transition-opacity duration-500 ease-in-out motion-reduce:transition-none opacity-100">
-              <ul className="flex flex-col gap-1 nextra-menu-desktop max-md:hidden">
+              <ul className="flex flex-col gap-1 swr-menu-desktop max-md:hidden">
                 {/* <li className="flex flex-col gap-1 active">
                   <a
                     className="flex rounded gap-2 items-center px-2 py-1.5 text-sm transition-colors cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border bg-primary-100 font-semibold text-primary-800 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:border-primary-500 contrast-more:dark:border-primary-500"

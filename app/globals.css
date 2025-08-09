@@ -21,21 +21,21 @@
 
 @layer base {
   :root {
-    --nextra-primary-hue: 212deg;
-    --nextra-primary-saturation: 100%;
-    --nextra-navbar-height: 3.5rem;
-    --nextra-menu-height: 3.75rem;
-    --nextra-banner-height: 2.5rem;
-    --nextra-bg: 255, 255, 255;
-    --nextra-primary-lightness: 45%;
+    --swr-primary-hue: 212deg;
+    --swr-primary-saturation: 100%;
+    --swr-navbar-height: 3.5rem;
+    --swr-menu-height: 3.75rem;
+    --swr-banner-height: 2.5rem;
+    --swr-bg: 255, 255, 255;
+    --swr-primary-lightness: 45%;
 
     /* --default-mono-font-family: 'TTT'; */
   }
 
   .dark {
-    --nextra-primary-hue: 204deg;
-    --nextra-primary-saturation: 100%;
-    --nextra-bg: 1, 1, 1;
+    --swr-primary-hue: 204deg;
+    --swr-primary-saturation: 100%;
+    --swr-bg: 1, 1, 1;
   }
 
   *,

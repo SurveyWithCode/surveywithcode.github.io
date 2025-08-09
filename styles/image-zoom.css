@@ -1,5 +1,5 @@
 @theme {
-  --nextra-bg: 0, 0, 0; /* Default to black for modal overlay, adjust as needed */
+  --swr-bg: 0, 0, 0; /* Default to black for modal overlay, adjust as needed */
 }
 
 [data-rmiz-ghost] {
@@ -57,7 +57,7 @@
 
 [data-rmiz-modal-overlay] {
   @apply absolute inset-0 transition-opacity duration-300;
-  background: rgba(var(--nextra-bg), 0.8);
+  background: rgba(var(--swr-bg), 0.8);
 }
 
 [data-rmiz-modal-overlay="hidden"] {

@@ -35,7 +35,7 @@ export function Callout({
   return (
     <div
       className={cn(
-        "nextra-callout overflow-x-auto mt-4 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4",
+        "swr-callout overflow-x-auto mt-4 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4",
         "contrast-more:border-current contrast-more:dark:border-current",
         className,
         classes[type]

@@ -11,10 +11,10 @@ import SearchBar from "./searchbar"
 
 export default function Header() {
   return (
-    // <div className="nextra-nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
-    //     <div className="nextra-nav-container-blur">
+    // <div className="swr-nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
+    //     <div className="swr-nav-container-blur">
     //     </div>
-    //     <nav className="mx-auto flex h-[var(--nextra-navbar-height)] max-w-[90rem] items-center justify-end gap-4 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
+    //     <nav className="mx-auto flex h-[var(--swr-navbar-height)] max-w-[90rem] items-center justify-end gap-4 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
     <Navbar>
       <Link className="flex items-center px-4 md:px-8 lg:px-24 hover:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
         <LogoIcon className="h-6 w-auto" alt="logo" />
@@ -44,7 +44,7 @@ export default function Header() {
       <a className="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 max-md:hidden whitespace-nowrap text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200" aria-current="false" href="/blog">Blog</a> */}
       {/* <AuthButton /> */}
 
-      {/* <div className="nextra-search relative md:w-64 max-md:hidden">
+      {/* <div className="swr-search relative md:w-64 max-md:hidden">
                     <div className="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
                         <input spellcheck="false" className="w-full appearance-none rounded-lg px-3 py-2 transition-colors text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 focus:!bg-transparent placeholder:text-gray-500 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current" type="search" placeholder="Search documentation…" value="" />
                         <kbd className="absolute my-1.5 select-none ltr:right-1.5 rtl:left-1.5 h-5 rounded bg-white px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-black/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity flex pointer-events-none max-sm:hidden">

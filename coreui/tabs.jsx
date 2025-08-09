@@ -68,7 +68,7 @@ export function Tabs({
       defaultIndex={defaultIndex}
       onChange={handleChange}
     >
-      <div className="nextra-scrollbar overflow-x-auto overflow-y-hidden overscroll-x-contain">
+      <div className="swr-scrollbar overflow-x-auto overflow-y-hidden overscroll-x-contain">
         <TabList className="mt-4 flex w-max min-w-full border-b border-gray-200 pb-px dark:border-neutral-800">
           {items.map((item, index) => {
             const disabled = isTabObjectItem(item) && item.disabled

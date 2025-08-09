@@ -9,7 +9,7 @@ export function Code({
   return (
     <code
       className={cn(
-        "nextra-code",
+        "swr-code",
         "data-line-numbers" in props && "[counter-reset:line]",
         className
       )}

@@ -73,7 +73,7 @@ a.cta:active span {
 }
 a.cta:focus-visible {
   outline: 2px solid
-    hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 77%);
+    hsl(var(--swr-primary-hue) var(--swr-primary-saturation) 77%);
   outline-offset: 2px;
 }
 a.cta:focus-visible span {

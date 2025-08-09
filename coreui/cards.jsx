@@ -4,11 +4,11 @@ import NextLink from 'next/link'
 
 const classes = {
   cards: cn(
-    'nextra-cards mt-4 gap-4 grid',
-    'not-prose' // for nextra-theme-blog
+    'swr-cards mt-4 gap-4 grid',
+    'not-prose' // for swr-theme-blog
   ),
   card: cn(
-    'nextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200',
+    'swr-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200',
     'text-current no-underline dark:shadow-none',
     'hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100',
     'active:shadow-sm active:shadow-gray-200',

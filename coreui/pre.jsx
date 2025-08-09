@@ -34,7 +34,7 @@ export function Pre({
     )
 
     return (
-        <div className="nextra-code relative mt-4 first:mt-0">
+        <div className="swr-code relative mt-4 first:mt-0">
             {filename && (
                 <div
                     className={cn(

@@ -37,7 +37,7 @@ export const CopyToClipboard = ({
 
   return (
     <Button onClick={handleClick} title="Copy code" tabIndex={0} {...props}>
-      <IconToUse className="nextra-copy-icon pointer-events-none h-4 w-4" />
+      <IconToUse className="swr-copy-icon pointer-events-none h-4 w-4" />
     </Button>
   )
 }

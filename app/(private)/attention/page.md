@@ -6,9 +6,9 @@ tags: attention transformer reinforcement-learning
 author: Lilian
 ---
 
-import { Callout } from 'nextra-theme-docs'
+import { Callout } from 'swr-theme-docs'
 import Features from 'components/features'
-import { Bleed } from 'nextra-theme-docs'
+import { Bleed } from 'swr-theme-docs'
 import CiteGraph from 'components/citegraph/citegraph'
 
 {

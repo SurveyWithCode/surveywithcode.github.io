@@ -13,14 +13,14 @@ export default function Page() {
 
   return (
     <div>
-      <div className="mx-auto flex max-w-(--nextra-content-width)">
+      <div className="mx-auto flex max-w-(--swr-content-width)">
         <div className="max-xl:hidden h-0 w-64 shrink-0"></div>
         <aside
           id="_r_0_"
-          className="nextra-sidebar print:hidden transition-all ease-in-out max-md:hidden flex flex-col h-[calc(100dvh-var(--nextra-navbar-height))] top-(--nextra-navbar-height) shrink-0 w-64 hidden"
+          className="swr-sidebar print:hidden transition-all ease-in-out max-md:hidden flex flex-col h-[calc(100dvh-var(--swr-navbar-height))] top-(--swr-navbar-height) shrink-0 w-64 hidden"
         >
-          <div className="p-4 overflow-y-auto nextra-scrollbar nextra-mask grow"></div>
-          <div className="sticky bottom-0 bg-nextra-bg nextra-sidebar-footer border-t nextra-border flex items-center gap-2 py-4 mx-4">
+          <div className="p-4 overflow-y-auto swr-scrollbar swr-mask grow"></div>
+          <div className="sticky bottom-0 bg-swr-bg swr-sidebar-footer border-t swr-border flex items-center gap-2 py-4 mx-4">
             <button
               title="Change theme"
               className="cursor-pointer h-7 rounded-md px-2 text-xs font-medium transition-colors text-gray-600 dark:text-gray-400 flex items-center gap-2 grow"
@@ -53,9 +53,9 @@ export default function Page() {
             </button>
           </div>
         </aside>
-        <nav className="nextra-toc order-last max-xl:hidden w-64 shrink-0 print:hidden" aria-label="table of contents"></nav>
-        <article className="w-full min-w-0 break-words min-h-[calc(100vh-var(--nextra-navbar-height))] text-slate-700 dark:text-slate-200 pb-8 px-4 pt-4 md:px-12 nextra-body-typesetting-article">
-          <div className="border inline-flex rounded-md items-stretch nextra-border float-end overflow-hidden">
+        <nav className="swr-toc order-last max-xl:hidden w-64 shrink-0 print:hidden" aria-label="table of contents"></nav>
+        <article className="w-full min-w-0 break-words min-h-[calc(100vh-var(--swr-navbar-height))] text-slate-700 dark:text-slate-200 pb-8 px-4 pt-4 md:px-12 swr-body-typesetting-article">
+          <div className="border inline-flex rounded-md items-stretch swr-border float-end overflow-hidden">
             <button className="transition cursor-pointer ps-2 pe-1 flex gap-2 text-sm font-medium items-center" type="button" data-headlessui-state="">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16">
                 <rect x="9" y="9" width="13" height="13" rx="2"></rect>
@@ -76,19 +76,19 @@ export default function Page() {
               </svg>
             </button>
           </div>
-          <div id="nextra-skip-nav"></div>
+          <div id="swr-skip-nav"></div>
           <main data-pagefind-body="true">
             <h1 className="tracking-tight dark:text-slate-100 font-bold mt-2 text-4xl">Blog</h1>
             <div className="mt-12">
               <h3 className="text-2xl font-semibold">Nextra 4</h3>
               <p className="my-6 leading-7 opacity-80">
                 App Router support, Turbopack support, compiled by React Compiler, new Rust-powered search Pagefind, RSC i18n, server/client components, smallest bundle size EVER
-                for a Nextra-powered website, GitHub Alert Syntax, new _meta.global file and more.{" "}
+                for a swr-powered website, GitHub Alert Syntax, new _meta.global file and more.{" "}
                 <a
-                  href="https://the-guild.dev/blog/nextra-4?utm_source=nextra.site&amp;utm_campaign=blog_page&amp;utm_content=blog_link"
+                  href="https://the-guild.dev/blog/swr-4?utm_source=nextra.site&amp;utm_campaign=blog_page&amp;utm_content=blog_link"
                   target="_blank"
                   rel="noreferrer"
-                  className="focus-visible:nextra-focus text-primary-600 underline hover:no-underline decoration-from-font [text-underline-position:from-font]"
+                  className="focus-visible:swr-focus text-primary-600 underline hover:no-underline decoration-from-font [text-underline-position:from-font]"
                 >
                   Read more&nbsp;
                   <svg
@@ -115,10 +115,10 @@ export default function Page() {
               <p className="my-6 leading-7 opacity-80">
                 MDX 3, new i18n, new _meta files with JSX support, more powerful TOC, remote MDX, better bundle size, MathJax, new code block styles, shikiji, ESM-only and more.{" "}
                 <a
-                  href="https://the-guild.dev/blog/nextra-3?utm_source=nextra.site&amp;utm_campaign=blog_page&amp;utm_content=blog_link"
+                  href="https://the-guild.dev/blog/swr-3?utm_source=nextra.site&amp;utm_campaign=blog_page&amp;utm_content=blog_link"
                   target="_blank"
                   rel="noreferrer"
-                  className="focus-visible:nextra-focus text-primary-600 underline hover:no-underline decoration-from-font [text-underline-position:from-font]"
+                  className="focus-visible:swr-focus text-primary-600 underline hover:no-underline decoration-from-font [text-underline-position:from-font]"
                 >
                   Read more&nbsp;
                   <svg
@@ -145,10 +145,10 @@ export default function Page() {
               <p className="my-6 leading-7 opacity-80">
                 Here are what the new version of Nextra 2 Framework includes.{" "}
                 <a
-                  href="https://the-guild.dev/blog/nextra-2?utm_source=nextra.site&amp;utm_campaign=blog_page&amp;utm_content=blog_link"
+                  href="https://the-guild.dev/blog/swr-2?utm_source=nextra.site&amp;utm_campaign=blog_page&amp;utm_content=blog_link"
                   target="_blank"
                   rel="noreferrer"
-                  className="focus-visible:nextra-focus text-primary-600 underline hover:no-underline decoration-from-font [text-underline-position:from-font]"
+                  className="focus-visible:swr-focus text-primary-600 underline hover:no-underline decoration-from-font [text-underline-position:from-font]"
                 >
                   Read more&nbsp;
                   <svg

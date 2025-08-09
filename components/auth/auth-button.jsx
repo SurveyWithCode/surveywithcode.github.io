@@ -59,11 +59,11 @@ const AuthButton = memo(function AuthButton() {
             anchor="bottom"
             transition="true"
             className={cn(
-              "focus-visible:nextra-focus",
+              "focus-visible:swr-focus",
               "px-2 py-1",
-              "nextra-scrollbar transition-opacity motion-reduce:transition-none",
+              "swr-scrollbar transition-opacity motion-reduce:transition-none",
               "border border-black/5 dark:border-white/20",
-              "backdrop-blur-md bg-nextra-bg/70",
+              "backdrop-blur-md bg-swr-bg/70",
               "z-20 rounded-md py-1 text-sm shadow-lg",
               "max-h-[min(calc(100vh-5rem),256px)]!"
             )}
