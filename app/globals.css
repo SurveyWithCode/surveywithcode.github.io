@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 /* @import "./fonts.css"; */
-@import "./mathfonts.css";
+@import "../styles/math/mathfonts.css";
+@import "../styles/math/mathstyles.css";
 @import "./colors.css";
 
 @import "../styles/cards.css";
@@ -47,15 +48,17 @@
   html {
     font-size: 13.333px;
     line-height: 1.2;
-
-    /* font-feature-settings: "liga", "kern";
+    hanging-punctuation: first last allow-end;
+    font-feature-settings: "liga", "kern";
     font-variant-ligatures: common-ligatures discretionary-ligatures;
     font-kerning: normal;
     font-variant-numeric: oldstyle-nums;
     letter-spacing: 0;
-    word-spacing: 0; */
+    word-spacing: 0;
+
     font-family:
-      "SurveyWithCode",
+      SurveyWithCode,
+      Katex_Main,
       "Segoe UI",
       TTT,
       ui-sans-serif,
