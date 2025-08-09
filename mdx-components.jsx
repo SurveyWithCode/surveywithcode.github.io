@@ -24,7 +24,7 @@ export function useMDXComponents(components) {
   return {
     h1: (props) => (
       <h1
-        className="my-6 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
+        className="my-6 text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
         {...props}
       />
     ),
@@ -32,7 +32,7 @@ export function useMDXComponents(components) {
       <h2
         className={cn(
           "font-semibold tracking-tight text-slate-900 dark:text-slate-100",
-          "mt-6 border-b pb-1 text-3xl border-neutral-200/70 contrast-more:border-neutral-400 dark:border-primary-100/10 contrast-more:dark:border-neutral-400"
+          "mt-6 border-b text-2xl border-neutral-200/70 contrast-more:border-neutral-400 dark:border-primary-100/10 contrast-more:dark:border-neutral-400"
         )}
         {...props}
       />
@@ -41,7 +41,7 @@ export function useMDXComponents(components) {
       <h3
         className={cn(
           "font-semibold tracking-tight text-slate-900 dark:text-slate-100",
-          "mt-8 text-2xl"
+          "mt-8 text-xl"
         )}
         {...props}
       />
@@ -50,7 +50,7 @@ export function useMDXComponents(components) {
       <h4
         className={cn(
           "font-semibold tracking-tight text-slate-900 dark:text-slate-100",
-          "mt-8 text-xl"
+          "mt-8 text-lg"
         )}
         {...props}
       />
@@ -59,7 +59,7 @@ export function useMDXComponents(components) {
       <h5
         className={cn(
           "font-semibold tracking-tight text-slate-900 dark:text-slate-100",
-          "mt-8 text-lg"
+          "mt-8 text-md"
         )}
         {...props}
       />
