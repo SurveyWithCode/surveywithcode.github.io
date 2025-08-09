@@ -3,7 +3,7 @@ import Sidebar from "./sidebar"
 
 export default function Body({ children }) {
   return (
-    <div className="mx-auto flex max-w-[90rem]">
+    <div className="mx-auto flex max-w-[90rem] px-2 sm:px-4">
       <div className="motion-reduce:transition-none [transition:background-color1.5sease]"></div>
       {/* <Sidebar/> */}
       {/* <nav className="nextra-toc order-last max-xl:hidden w-64 shrink-0 print:hidden px-4" aria-label="table of contents">
@@ -79,7 +79,7 @@ export default function Body({ children }) {
                 </div>
             </nav> */}
       <div id="reach-skip-nav"></div>
-      <article className="w-full break-words nextra-content flex min-h-[calc(100vh-var(--nextra-navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <article className="w-full break-words nextra-content flex min-h-[calc(100vh-var(--nextra-navbar-height))] min-w-0 justify-center pb-8 pr-0 sm:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
         {children}
       </article>
     </div>

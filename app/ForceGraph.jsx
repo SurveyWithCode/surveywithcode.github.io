@@ -9,8 +9,10 @@ export default function ForceGraph({ data }) {
   useEffect(() => {
     if (!data) return
 
-    const width = 928
-    const height = 600
+    // Get responsive dimensions
+    const container = svgRef.current.parentElement
+    const width = Math.min(container?.offsetWidth || 400, 928)
+    const height = Math.min(width * 0.65, 600) // Maintain aspect ratio
 
     // Remove old SVG content
     d3.select(svgRef.current).selectAll("*").remove()
@@ -96,5 +98,9 @@ export default function ForceGraph({ data }) {
     return () => simulation.stop()
   }, [data])
 
-  return <svg ref={svgRef}></svg>
+  return (
+    <div className="w-full overflow-hidden">
+      <svg ref={svgRef} className="w-full h-auto max-w-full"></svg>
+    </div>
+  )
 }

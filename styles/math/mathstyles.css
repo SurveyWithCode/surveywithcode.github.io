@@ -1,9 +1,10 @@
 .katex {
   font:
-    normal 1.21em KaTeX_Main,
+    normal 1rem KaTeX_Main,
+    SurveyWithCode,
     Times New Roman,
     serif;
-    
+
   line-height: 1.2;
   text-indent: 0;
   text-rendering: auto;

@@ -16,7 +16,7 @@ export default function Header() {
     //     </div>
     //     <nav className="mx-auto flex h-[var(--nextra-navbar-height)] max-w-[90rem] items-center justify-end gap-4 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
     <Navbar>
-      <Link className="flex items-center px-24 hovesr:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
+      <Link className="flex items-center px-4 md:px-8 lg:px-24 hover:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
         <LogoIcon className="h-6 w-auto" alt="logo" />
         {/* <Image
           src="/logo.png"

@@ -50,7 +50,7 @@
   }
 
   html {
-    font-size: 13.333px;
+    font-size: clamp(14px, 2.5vw, 16px);
     line-height: 1.2;
 
     @apply text-base;
@@ -112,6 +112,18 @@
 
   .dark:text-slate-200:where(.dark *) {
     color: rgba(229, 231, 235);
+  }
+
+  /* Mobile responsive utilities */
+  .mobile-full-width {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  @media (max-width: 768px) {
+    .md-hide {
+      display: none !important;
+    }
   }
 }
 

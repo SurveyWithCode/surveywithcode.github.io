@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .test-container {
+            border: 2px solid red;
+            background: rgba(255, 0, 0, 0.1);
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .full-width {
+            width: 100%;
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid green;
+            padding: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-info {
+                display: block;
+                background: yellow;
+                padding: 10px;
+                margin: 10px 0;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-info {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-info">
+        <strong>Mobile view detected!</strong> Screen width is less than 768px.
+    </div>
+    
+    <h1>Responsive Width Test</h1>
+    
+    <div class="test-container">
+        <h2>Container Test</h2>
+        <p>This container should expand to full width on mobile devices.</p>
+        <div class="full-width">
+            This div should be 100% width of its container.
+        </div>
+    </div>
+    
+    <div class="test-container" style="max-width: 90rem; margin: 0 auto;">
+        <h2>Max-Width Container (90rem)</h2>
+        <p>This matches your site's max-width constraint.</p>
+        <div class="full-width">
+            Full width within constrained container.
+        </div>
+    </div>
+    
+    <script>
+        function updateScreenInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.title = `Responsive Test - ${width}x${height}`;
+            
+            const info = document.createElement('div');
+            info.style.position = 'fixed';
+            info.style.top = '0';
+            info.style.right = '0';
+            info.style.background = 'rgba(0,0,0,0.8)';
+            info.style.color = 'white';
+            info.style.padding = '10px';
+            info.style.fontSize = '12px';
+            info.style.zIndex = '9999';
+            info.innerHTML = `${width} x ${height}px`;
+            
+            // Remove previous info
+            const prev = document.querySelector('.screen-info');
+            if (prev) prev.remove();
+            
+            info.className = 'screen-info';
+            document.body.appendChild(info);
+        }
+        
+        window.addEventListener('resize', updateScreenInfo);
+        updateScreenInfo();
+    </script>
+</body>
+</html>

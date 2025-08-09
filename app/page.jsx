@@ -16,12 +16,14 @@ export default function Page() {
 
   return (
     <Body>
-      <main className="w-full min-w-0  px-2 pt-4">
-        <div className="grid grid-cols-3 mt-4">
-          <div className="col-span-2 w-full  pl-20 pr-8">
+      <main className="w-full min-w-0 px-2 md:px-4 pt-4">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-4">
+          <div className="xl:col-span-2 w-full px-2 md:px-4 xl:pl-20 xl:pr-8">
             <HomePage />
           </div>
-          <ForceGraph data={data} />
+          <div className="w-full xl:w-auto">
+            <ForceGraph data={data} />
+          </div>
         </div>
       </main>
     </Body>
