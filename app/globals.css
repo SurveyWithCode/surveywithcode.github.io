@@ -45,6 +45,10 @@
     border: 0 solid #e5e7eb;
   }
 
+  article > * {
+    @apply text-justify;
+  }
+
   html {
     font-size: 13.333px;
     line-height: 1.2;
@@ -54,8 +58,8 @@
       "rlig" 1,
       "calt" 1,
       "ss01" 1; */
-    /* -webkit-tap-highlight-color: transparent; */
-    hanging-punctuation: first last allow-end;
+    -webkit-tap-highlight-color: transparent;
+    /* hanging-punctuation: first last allow-end; */
     font-feature-settings: "liga", "kern";
     font-variant-ligatures: common-ligatures discretionary-ligatures;
     font-kerning: normal;
